@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Tailwind v4 Theme — CodeMeck Brand Tokens
+   ============================================================ */
+@theme {
+  --color-bg: #080A0C;
+  --color-text-primary: #F5F7FA;
+  --color-text-secondary: #9299A6;
+  --color-accent: #A3FF6F;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
+}
+
+/* ============================================================
+   CSS Custom Properties (for inline style usage)
+   ============================================================ */
+:root {
+  --color-border: rgba(162, 255, 111, 0.12);
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-glow: rgba(163, 255, 111, 0.15);
+}
+
+/* ============================================================
+   Base Reset
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #080A0C;
+  color: #F5F7FA;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(163, 255, 111, 0.2);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 255, 111, 0.4);
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   Selection
+   ============================================================ */
+::selection {
+  background: rgba(163, 255, 111, 0.2);
+  color: #F5F7FA;
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+.accent-glow {
+  text-shadow: 0 0 30px rgba(163, 255, 111, 0.4), 0 0 60px rgba(163, 255, 111, 0.15);
+}
