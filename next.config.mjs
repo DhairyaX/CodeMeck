@@ -9,6 +9,16 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+
+  output: "export",
+
+  trailingSlash: true,
+
+  basePath: "/codemec",
+
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
